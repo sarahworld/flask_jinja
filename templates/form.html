@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Story Form</title>
+</head>
+<body>
+    <h1>QUESTIONS</h1>
+
+    
+    <form action="/story" id="questions">
+        {% for prompt in prompts %}
+        <label for="{{ prompt }}"">{{ prompt }}
+            <input type="text" name="{{ prompt }}"" id="{{ prompt }}"/>
+        </label> 
+        {% endfor %}
+        <input type="submit" name="Submit"/>
+    </form>
+   
+    
+</body>
+</html>
